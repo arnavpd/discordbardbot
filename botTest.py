@@ -16,7 +16,7 @@ async def send_message(message, user_message, is_private):
 
 
 def run_discord_bot():
-    # client = discord.Client(intents=intents)
+
     bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
     
     @bot.event
@@ -49,12 +49,6 @@ def run_discord_bot():
       await interaction.response.send_message(response)
       await on_command(interaction, question, response)
 
-
-    # @bot.tree.command(name='dm')
-    # async def question(interaction: discord.Interaction):
-    #   await interaction.response.send_message(responses.run_bard(question,False))
-    #   interaction.response.autocomplete()
-
     
     async def on_command(interaction: discord.Interaction, prompt, response):
       # print who called the command
@@ -72,14 +66,8 @@ def run_discord_bot():
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
-
+        # for console purposes
         print(f'{username} said: "{user_message}" ({channel})')
-
-        # if user_message[0] == '?':
-        #   user_message = user_message[1:]
-        #   await send_message(message, user_message, is_private=True)
-        # elif user_message[0] == '$':
-        #   await send_message(message, user_message, is_private=False)
         
   
     my_secret = os.environ['TOKEN']
