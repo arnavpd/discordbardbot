@@ -10,7 +10,7 @@ This is a Discord bot designed to provide AI-generated responses and summaries u
 
 ## Installation
 ### Getting started 
-Head to ```url https://discord.com/developers/applications``` and create a bot, following the instructions given on the site. Make note of the Discord bot token.
+Head to ```https://discord.com/developers/applications``` and create a bot, following the instructions given on the site. Make note of the Discord bot token.
 ### Dependencies
 Pip install the required dependencies:
    ```bash 
